@@ -1,0 +1,11 @@
+c:\users\qa1\documents\visual studio 2015\Projects\GUIv2N\GUIv2N\bin\Debug\GUIv2N.exe.config
+c:\users\qa1\documents\visual studio 2015\Projects\GUIv2N\GUIv2N\bin\Debug\GUIv2N.exe
+c:\users\qa1\documents\visual studio 2015\Projects\GUIv2N\GUIv2N\bin\Debug\GUIv2N.pdb
+c:\users\qa1\documents\visual studio 2015\Projects\GUIv2N\GUIv2N\bin\Debug\Newtonsoft.Json.dll
+c:\users\qa1\documents\visual studio 2015\Projects\GUIv2N\GUIv2N\bin\Debug\Newtonsoft.Json.xml
+c:\users\qa1\documents\visual studio 2015\Projects\GUIv2N\GUIv2N\obj\Debug\GUIv2N.csprojResolveAssemblyReference.cache
+c:\users\qa1\documents\visual studio 2015\Projects\GUIv2N\GUIv2N\obj\Debug\GUIv2N.Form1.resources
+c:\users\qa1\documents\visual studio 2015\Projects\GUIv2N\GUIv2N\obj\Debug\GUIv2N.Properties.Resources.resources
+c:\users\qa1\documents\visual studio 2015\Projects\GUIv2N\GUIv2N\obj\Debug\GUIv2N.csproj.GenerateResource.Cache
+c:\users\qa1\documents\visual studio 2015\Projects\GUIv2N\GUIv2N\obj\Debug\GUIv2N.exe
+c:\users\qa1\documents\visual studio 2015\Projects\GUIv2N\GUIv2N\obj\Debug\GUIv2N.pdb
