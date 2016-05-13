@@ -119,42 +119,33 @@ namespace GUIv2N
 
         private void btnSaveFile_Click(object sender, EventArgs e)
         {
-            //fileName = fileNameBox.Text;
-
             string jsonFunc = JsonConvert.SerializeObject(funcParamList);
-
 
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.Filter = "JSON File|*.json";
             saveFileDialog1.Title = "Save Function File";
             saveFileDialog1.ShowDialog();
 
-            //fileName = fileNameBox.Text;
-            //string filePath = @"C:\Users\qa1\Desktop\JSONDeneme\" + fileName + ".json";
-
             if (saveFileDialog1.FileName != "")
             {
                 string name = saveFileDialog1.FileName;
                 File.WriteAllText(name, jsonFunc);
 
-            }
-            //  System.IO.File.WriteAllText(filePath, jsonFunc);
 
+             /*   string tempfile = Path.GetTempFileName();
+                using (var writer = new StreamWriter(tempfile))
+                using (var reader = new StreamReader(name))
+                {
+                    writer.WriteLine("{ \"Functions\" : [");
+                    while (!reader.EndOfStream)
+                        writer.WriteLine(reader.ReadLine());
+                }
 
-            /*using (StreamWriter sw = File.AppendText(filePath))
-            {
-                sw.WriteLine("}");
-            }
+          
 
-            string tempfile = Path.GetTempFileName();
-            using (var writer = new StreamWriter(tempfile))
-            using (var reader = new StreamReader(filePath))
-            {
-                writer.WriteLine("{Functions:");
-                while (!reader.EndOfStream)
-                    writer.WriteLine(reader.ReadLine());
+                File.Copy(tempfile, name, true);*/
+
             }
-            File.Copy(tempfile, filePath, true);*/
         }
 
         private void btnDelFunc_Click(object sender, EventArgs e)
@@ -270,19 +261,7 @@ namespace GUIv2N
             if (loadFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string jsonFileName = loadFileDialog.FileName;
-
-                /*    /////////////////////// V ////////////////////
-                    FileStream fs = new FileStream(jsonFileName, FileMode.Open, FileAccess.ReadWrite);
-                    fs.SetLength(fs.Length - 1);
-                    fs.Close();
-                    //////////////////////  ^ ///////////////////    */
-
                 string jsonFile = File.ReadAllText(jsonFileName);
-
-                /*     /////////////////////// V ////////////////////
-                     jsonFile = jsonFile.Substring(13);
-                     //////////////////////  ^ ///////////////////              */
-
                 var loadedFile = JsonConvert.DeserializeObject<List<FunctionData>>(jsonFile);
 
                 funcParamList.Clear();
@@ -317,7 +296,7 @@ namespace GUIv2N
                         obj.destinationImageObj = boxTemplateNameIR.Text;
                         obj.templateNameObj = boxTemplateNameIR.Text;
                         obj.sourceNameObj = boxScreenshotNameIR.Text;
-                        obj.grayedSourceObj = boxScreenshotNameIR.Text + "Gray";
+                        obj.grayedSourceObj = boxScreenshotNameIR.Text + "Grayed";
                         obj.cannySourceObj = boxScreenshotNameIR.Text + "Canny";
                         obj.resizedCannyObj = boxScreenshotNameIR.Text + "Resized";
                         obj.cannyResultObj = boxScreenshotNameIR.Text + "Result";
@@ -359,10 +338,6 @@ namespace GUIv2N
                             listBoxfunction.Items.Add(obj.functionName);
                       //  }
 
-
-
-
-
                     } //end if
                 } //end foreach
 
@@ -371,7 +346,7 @@ namespace GUIv2N
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
                 DialogResult result;
                 result = MessageBox.Show(message, caption, buttons);
-            } //end loadFileButton_Click
+            }  
         }
 
         private void btnClearFuncList_Click(object sender, EventArgs e)
@@ -417,9 +392,8 @@ namespace GUIv2N
             {
                 txts.Text = String.Empty;
             }
-
         }
-
+        
         private void radioLoc_CheckedChanged(object sender, EventArgs e)
         {
             if (radioLoc.Checked)
@@ -518,11 +492,6 @@ namespace GUIv2N
                 default:
                     buttonClickCount--; //add some logic if something unexpected happens
                     break;
-
-                    /*  Select all the buttons in the designer and navigate to the event section in the properties. 
-                      Copy the name of the event (in this case button1_Click) next to "Click". 
-                      The event will be fired whenever a button that has registered this event is clicked
-                      */
             } //end switch
         }
 
@@ -627,8 +596,6 @@ namespace GUIv2N
                 }
             }
         }
-
-
 
         private void btnClearIR_Click(object sender, EventArgs e)
         {
