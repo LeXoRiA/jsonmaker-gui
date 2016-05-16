@@ -38,13 +38,9 @@ namespace GUIv2N
 
             public string functionName;
             public string methodType;
-
-
-
-
+            
             public bool isValidIR()
             {
-
                 if (String.IsNullOrEmpty(screenshotNameObj) || String.IsNullOrEmpty(imageURLObj) || String.IsNullOrEmpty(destinationImageObj) || String.IsNullOrEmpty(templateNameObj)
                     || String.IsNullOrEmpty(sourceNameObj) || String.IsNullOrEmpty(grayedSourceObj) || String.IsNullOrEmpty(cannySourceObj) || String.IsNullOrEmpty(resizedCannyObj)
                      || String.IsNullOrEmpty(cannyResultObj) || String.IsNullOrEmpty(outImageObj) || String.IsNullOrEmpty(functionName) || String.IsNullOrEmpty(actionObj) || sleepTimeObj == 0)
@@ -57,7 +53,6 @@ namespace GUIv2N
 
             public bool isValidLoc()
             {
-
                 if (String.IsNullOrEmpty(functionName) || startPositionObj == 0 || endPositionObj == 0)
                 {
                     MessageBox.Show("Please make sure you entered function name and start-end positions!", "Get Low!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -66,8 +61,7 @@ namespace GUIv2N
                 return true;
             } //end isValid()
         } //end FunctionData class
-
-
+        
         private int startPosition;
         private int endPosition;
         private int buttonClickCount = 0; //set to 0 in constructor
@@ -79,9 +73,7 @@ namespace GUIv2N
             InitializeComponent();
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
         }
-
-
-
+        
         private void getParams(FunctionData data)
         {
             boxScreenshotNameIR.Text = data.screenshotNameObj;
@@ -90,8 +82,6 @@ namespace GUIv2N
             boxOutImageIR.Text = data.outImageObj;
             boxFunctionNameIR.Text = data.functionName;
             sleepTimeIR.Value = data.sleepTimeObj;
-
-
 
             if (data.actionObj == "left")
             {
@@ -113,7 +103,6 @@ namespace GUIv2N
             {
                 radioTapIR.PerformClick();
             }
-
             return;
         }
 
@@ -130,8 +119,7 @@ namespace GUIv2N
             {
                 string name = saveFileDialog1.FileName;
                 File.WriteAllText(name, jsonFunc);
-
-
+                
              /*   string tempfile = Path.GetTempFileName();
                 using (var writer = new StreamWriter(tempfile))
                 using (var reader = new StreamReader(name))
@@ -140,11 +128,8 @@ namespace GUIv2N
                     while (!reader.EndOfStream)
                         writer.WriteLine(reader.ReadLine());
                 }
-
-          
-
+                
                 File.Copy(tempfile, name, true);*/
-
             }
         }
 
@@ -159,7 +144,10 @@ namespace GUIv2N
 
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
-                if (listBoxfunction.SelectedItem == null) { return; }
+                if (listBoxfunction.SelectedItem == null)
+                {
+                    return;
+                }
                 for (var i = funcParamList.Count - 1; i >= 0; i--)
                 {
                     if (funcParamList[i].functionName == listBoxfunction.SelectedItem.ToString())
@@ -196,13 +184,11 @@ namespace GUIv2N
                 {
                     txts.Text = String.Empty;
                 }
-
             } //end if
         }
 
         private void btnSaveFunc_Click(object sender, EventArgs e)
         {
-
             FunctionData funcParams = new FunctionData();
             funcParams.screenshotNameObj = boxScreenshotNameIR.Text;
             funcParams.imageURLObj = boxImageUrlIR.Text;
@@ -309,8 +295,7 @@ namespace GUIv2N
                         boxEndLoc.Text = endPosition.ToString();
 
                         obj.functionName = boxFunctionNameIR.Text;
-
-
+                        
                         if (radioSwipeLeftIR.Checked)
                         {
                             obj.actionObj = "left";
@@ -340,7 +325,6 @@ namespace GUIv2N
 
                     } //end if
                 } //end foreach
-
                 string message = "Level has been loaded successfully!";
                 string caption = "Level Loaded";
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
@@ -567,7 +551,6 @@ namespace GUIv2N
             }
             if (radioIR.Checked == true)
             {
-
                 if (funcParams.isValidIR())
                 {
                     funcParams.startPositionObj = 0;
@@ -592,7 +575,6 @@ namespace GUIv2N
                     }
                     funcParamList.Add(funcParams);
                     listBoxfunction.Items.Add(boxFunctionNameIR.Text);
-
                 }
             }
         }
@@ -621,10 +603,5 @@ namespace GUIv2N
                 radioTapIR.Checked = false;
             } //end if
         }
-
-
     }
 }
-
-
- //end GUIv2
