@@ -108,7 +108,11 @@ namespace GUIv2N
 
         private void btnSaveFile_Click(object sender, EventArgs e)
         {
-            string jsonFunc = JsonConvert.SerializeObject(funcParamList);
+            
+            Dictionary<String, List<FunctionData>> obj = new Dictionary<string, List<FunctionData>>();
+            obj.Add("Functions", funcParamList);
+
+            string jsonFunc = JsonConvert.SerializeObject(obj);
 
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.Filter = "JSON File|*.json";
@@ -248,7 +252,8 @@ namespace GUIv2N
             {
                 string jsonFileName = loadFileDialog.FileName;
                 string jsonFile = File.ReadAllText(jsonFileName);
-                var loadedFile = JsonConvert.DeserializeObject<List<FunctionData>>(jsonFile);
+                var loadedDict = JsonConvert.DeserializeObject<Dictionary<String, List<FunctionData>>>(jsonFile);
+                var loadedFile = loadedDict["Functions"];
 
                 funcParamList.Clear();
                 listBoxfunction.Items.Clear();
