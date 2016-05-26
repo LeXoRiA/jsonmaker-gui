@@ -17,7 +17,6 @@ namespace GUIv2N
 {
     public partial class Form1 : Form
     {
-
         public class FunctionData
         {
             public string screenshotNameObj;
@@ -47,7 +46,7 @@ namespace GUIv2N
                 {
                     MessageBox.Show("Please make sure you entered all parameters and chose an action. Oh, remember, sleep time cannot be zero!", "Get Low!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
-                } //end if
+                }
                 return true;
             } //end isValid()
 
@@ -57,7 +56,7 @@ namespace GUIv2N
                 {
                     MessageBox.Show("Please make sure you entered function name and start-end positions!", "Get Low!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
-                } //end if
+                }
                 return true;
             } //end isValid()
         } //end FunctionData class
@@ -124,13 +123,10 @@ namespace GUIv2N
                 string name = saveFileDialog1.FileName;
                 File.WriteAllText(name, jsonFunc);
 
-                
+                statusAction.Text = string.Format("File has been saved as " + name);
+                statusTime.Text = string.Format(DateTime.Now.ToString("hh:mm:ss tt"));
+                statusStrip1.Refresh();
             }
-
-            statusAction.Text = string.Format("File has been saved as " + name);
-            statusTime.Text = string.Format(DateTime.Now.ToString("hh:mm:ss tt"));
-            statusStrip1.Refresh();
-
         }
 
         private void btnDelFunc_Click(object sender, EventArgs e)
@@ -235,9 +231,7 @@ namespace GUIv2N
             if (funcParams.isValidIR() || funcParams.isValidLoc())
             {
                 funcParamList.Add(funcParams);
-                listBoxfunction.Items.Equals(boxFunctionNameIR.Text);
-
-                
+                listBoxfunction.Items.Equals(boxFunctionNameIR.Text);                
             }
 
             statusAction.Text = string.Format("Function has been saved!");
@@ -333,20 +327,14 @@ namespace GUIv2N
                             funcParamList.Add(obj);
                             listBoxfunction.Items.Add(obj.functionName);
                         //  }
-
-                       
-
                     } //end if
                 } //end foreach
-
-               
-
-            }
+            } //end if
 
             statusAction.Text = string.Format("Level has been loaded successfully!");
             statusTime.Text = string.Format(DateTime.Now.ToString("hh:mm:ss tt"));
             statusStrip1.Refresh();
-        }
+        } //end btnLoadFile_Click
 
         private void btnClearFuncList_Click(object sender, EventArgs e)
         {
@@ -570,10 +558,6 @@ namespace GUIv2N
 
             if (radioIR.Checked == true)
             {
-
-            }
-            if (radioIR.Checked == true)
-            {
                 if (funcParams.isValidIR())
                 {
                     funcParams.startPositionObj = 0;
@@ -586,7 +570,6 @@ namespace GUIv2N
             {
                 if (funcParams.isValidLoc())
                 {
-
                     foreach (TextBox box in groupBoxParams.Controls.OfType<TextBox>())
                     {
                         box.Text = String.Empty;
@@ -597,18 +580,14 @@ namespace GUIv2N
                         radio.Checked = false;
                     }
                     funcParamList.Add(funcParams);
-                    listBoxfunction.Items.Add(boxFunctionNameIR.Text);
-
-                    
-                }
-            }
+                    listBoxfunction.Items.Add(boxFunctionNameIR.Text);                                       
+                } //end if
+            } //end else if
 
             statusAction.Text = string.Format("Function has been added!");
             statusTime.Text = string.Format(DateTime.Now.ToString("hh:mm:ss tt"));
             statusStrip1.Refresh();
-
-
-        }
+        } //end btnAddFunc_Click
 
         private void btnClearIR_Click(object sender, EventArgs e)
         {
@@ -631,14 +610,12 @@ namespace GUIv2N
                 radioSwipeRightIR.Checked = false;
                 radioSwipeUpIR.Checked = false;
                 radioSwipeDownIR.Checked = false;
-                radioTapIR.Checked = false;
-
-                
-            } //end if
+                radioTapIR.Checked = false;                
+            }
 
             statusAction.Text = string.Format("Paramters has been cleared!");
             statusTime.Text = string.Format(DateTime.Now.ToString("hh:mm:ss tt"));
             statusStrip1.Refresh();
-        }
+        } //end btnClearIR_Click
     }
 }
