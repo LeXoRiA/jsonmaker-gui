@@ -135,6 +135,9 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.statusAction = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabPage1.SuspendLayout();
             this.groupBoxLoc.SuspendLayout();
             this.groupBoxMethod.SuspendLayout();
@@ -144,6 +147,7 @@
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage1
@@ -1383,7 +1387,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Segoe Script", 3.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(1162, 720);
+            this.label27.Location = new System.Drawing.Point(1189, 9);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(39, 7);
             this.label27.TabIndex = 44;
@@ -1421,11 +1425,34 @@
             this.tabControl1.Size = new System.Drawing.Size(1218, 706);
             this.tabControl1.TabIndex = 43;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusAction,
+            this.statusTime});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 759);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1235, 22);
+            this.statusStrip1.TabIndex = 45;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // statusAction
+            // 
+            this.statusAction.Name = "statusAction";
+            this.statusAction.Size = new System.Drawing.Size(0, 17);
+            // 
+            // statusTime
+            // 
+            this.statusTime.Name = "statusTime";
+            this.statusTime.Size = new System.Drawing.Size(0, 17);
+            this.statusTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1235, 738);
+            this.ClientSize = new System.Drawing.Size(1235, 781);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -1444,6 +1471,8 @@
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1557,6 +1586,9 @@
         private System.Windows.Forms.Button btn12;
         private System.Windows.Forms.Button btn11;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel statusAction;
+        private System.Windows.Forms.ToolStripStatusLabel statusTime;
     }
 }
 

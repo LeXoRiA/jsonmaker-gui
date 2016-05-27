@@ -111,7 +111,7 @@ namespace GUIv2N
             Dictionary<String, List<FunctionData>> obj = new Dictionary<string, List<FunctionData>>();
             obj.Add("Functions", funcParamList);
 
-            string jsonFunc = JsonConvert.SerializeObject(obj);
+            string jsonFunc = JsonConvert.SerializeObject(obj, Formatting.Indented);
 
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.Filter = "JSON File|*.json";
@@ -497,7 +497,7 @@ namespace GUIv2N
             {
                 if (obj.functionName == listBoxfunction.SelectedItem.ToString())
                 {
-                    getParams(obj);
+                    getParams(obj);        
                 }
             } //end for
         }

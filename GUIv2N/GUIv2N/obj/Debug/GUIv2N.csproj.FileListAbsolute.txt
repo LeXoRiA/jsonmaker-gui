@@ -9,3 +9,14 @@ c:\users\qa1\documents\visual studio 2015\Projects\GUIv2N\GUIv2N\obj\Debug\GUIv2
 c:\users\qa1\documents\visual studio 2015\Projects\GUIv2N\GUIv2N\obj\Debug\GUIv2N.csproj.GenerateResource.Cache
 c:\users\qa1\documents\visual studio 2015\Projects\GUIv2N\GUIv2N\obj\Debug\GUIv2N.exe
 c:\users\qa1\documents\visual studio 2015\Projects\GUIv2N\GUIv2N\obj\Debug\GUIv2N.pdb
+C:\Users\qa1\Documents\Visual Studio 2015\Projects\GUIv2N\jsonmaker-gui\GUIv2N\GUIv2N\bin\Debug\GUIv2N.exe.config
+C:\Users\qa1\Documents\Visual Studio 2015\Projects\GUIv2N\jsonmaker-gui\GUIv2N\GUIv2N\obj\Debug\GUIv2N.exe
+C:\Users\qa1\Documents\Visual Studio 2015\Projects\GUIv2N\jsonmaker-gui\GUIv2N\GUIv2N\obj\Debug\GUIv2N.pdb
+C:\Users\qa1\Documents\Visual Studio 2015\Projects\GUIv2N\jsonmaker-gui\GUIv2N\GUIv2N\bin\Debug\GUIv2N.exe
+C:\Users\qa1\Documents\Visual Studio 2015\Projects\GUIv2N\jsonmaker-gui\GUIv2N\GUIv2N\bin\Debug\GUIv2N.pdb
+C:\Users\qa1\Documents\Visual Studio 2015\Projects\GUIv2N\jsonmaker-gui\GUIv2N\GUIv2N\bin\Debug\Newtonsoft.Json.dll
+C:\Users\qa1\Documents\Visual Studio 2015\Projects\GUIv2N\jsonmaker-gui\GUIv2N\GUIv2N\bin\Debug\Newtonsoft.Json.xml
+C:\Users\qa1\Documents\Visual Studio 2015\Projects\GUIv2N\jsonmaker-gui\GUIv2N\GUIv2N\obj\Debug\GUIv2N.csprojResolveAssemblyReference.cache
+C:\Users\qa1\Documents\Visual Studio 2015\Projects\GUIv2N\jsonmaker-gui\GUIv2N\GUIv2N\obj\Debug\GUIv2N.Form1.resources
+C:\Users\qa1\Documents\Visual Studio 2015\Projects\GUIv2N\jsonmaker-gui\GUIv2N\GUIv2N\obj\Debug\GUIv2N.Properties.Resources.resources
+C:\Users\qa1\Documents\Visual Studio 2015\Projects\GUIv2N\jsonmaker-gui\GUIv2N\GUIv2N\obj\Debug\GUIv2N.csproj.GenerateResource.Cache
