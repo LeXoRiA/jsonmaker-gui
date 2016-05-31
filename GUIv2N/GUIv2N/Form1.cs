@@ -427,7 +427,6 @@ namespace GUIv2N
                     btn.Enabled = false;
                 }
             }
-
             else
             {
                 foreach (Button btn in groupBoxLoc.Controls.OfType<Button>())

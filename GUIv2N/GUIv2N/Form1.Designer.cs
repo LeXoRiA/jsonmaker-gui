@@ -138,6 +138,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statusAction = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusTime = new System.Windows.Forms.ToolStripStatusLabel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabPage1.SuspendLayout();
             this.groupBoxLoc.SuspendLayout();
             this.groupBoxMethod.SuspendLayout();
@@ -148,6 +149,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage1
@@ -183,6 +185,7 @@
             // 
             // groupBoxLoc
             // 
+            this.groupBoxLoc.Controls.Add(this.pictureBox2);
             this.groupBoxLoc.Controls.Add(this.btn88);
             this.groupBoxLoc.Controls.Add(this.btn87);
             this.groupBoxLoc.Controls.Add(this.btn86);
@@ -1447,6 +1450,15 @@
             this.statusTime.Size = new System.Drawing.Size(0, 17);
             this.statusTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GUIv2N.Properties.Resources.kingo_gif;
+            this.pictureBox2.Location = new System.Drawing.Point(88, 318);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(128, 132);
+            this.pictureBox2.TabIndex = 96;
+            this.pictureBox2.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1473,6 +1485,7 @@
             this.tabControl1.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1589,6 +1602,7 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel statusAction;
         private System.Windows.Forms.ToolStripStatusLabel statusTime;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
